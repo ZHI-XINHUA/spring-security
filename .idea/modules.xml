@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/immoc-security.iml" filepath="$PROJECT_DIR$/immoc-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/immoc-security-app/immoc-security-app.iml" filepath="$PROJECT_DIR$/immoc-security-app/immoc-security-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/immoc-security-browser/immoc-security-browser.iml" filepath="$PROJECT_DIR$/immoc-security-browser/immoc-security-browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/immoc-security-code/immoc-security-code.iml" filepath="$PROJECT_DIR$/immoc-security-code/immoc-security-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/immoc-security-demo/immoc-security-demo.iml" filepath="$PROJECT_DIR$/immoc-security-demo/immoc-security-demo.iml" />
+    </modules>
+  </component>
+</project>

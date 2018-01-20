@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="immoc-security-app" />
+        <module name="immoc-security-browser" />
+        <module name="immoc-security-code" />
+        <module name="immoc-security-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="immoc-seccurity" target="1.8" />
+      <module name="immoc-security" target="1.8" />
+      <module name="immoc-security-app" target="1.8" />
+      <module name="immoc-security-browser" target="1.8" />
+      <module name="immoc-security-code" target="1.8" />
+      <module name="immoc-security-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

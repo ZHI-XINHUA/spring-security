@@ -30,18 +30,33 @@ public class UserControllerTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
     }
 
+    //查询
     @Test
     public void whenQuerySuccess() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.get("/user")  //请求路径
+        String result = mockMvc.perform(MockMvcRequestBuilders.get("/user")  //get方式请求
                .param("username","james")
                 .param("age","18")
                 .param("ageTo","30")
                 .param("sort","username,asc")
                 .contentType(MediaType.APPLICATION_JSON_UTF8))  //请求的编码格式
                 .andExpect(MockMvcResultMatchers.status().isOk())  //期望的返回状态
-                .andExpect(MockMvcResultMatchers.jsonPath("$.length()").value(2));//期望返回的内容
+                .andExpect(MockMvcResultMatchers.jsonPath("$.length()").value(2))//期望返回的内容，长度必须是2
+                .andReturn().getResponse().getContentAsString();//获取返回结果 json字符串
+        System.out.println("result="+result);
 
-        //避免重复写MockMvcRequestBuilders、MockMvcResultMatchers ，可以将它们添加到编译器偏好
+    }
+
+    //获取详情
+    @Test
+    public  void whenGetInfoSuccess() throws  Exception{
+        String result = mockMvc.perform(MockMvcRequestBuilders.get("/user/lisi")//get请求
+        .contentType(MediaType.APPLICATION_JSON_UTF8)) //请求的编码格式
+                .andExpect(MockMvcResultMatchers.status().isOk())//期望的返回状态
+                .andExpect(MockMvcResultMatchers.jsonPath("$.username").value("lisi"))//期望username为lisi
+                .andReturn().getResponse().getContentAsString();//获取返回结果 json字符串
+
+        System.out.println(result);
+
     }
 
 }
